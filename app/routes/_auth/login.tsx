@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Eye, EyeOff, Phone, Lock, X } from "lucide-react";
-import { log } from "console";
+
 import { Button } from "~/components/ui/button";
 
 export default function LoginPage() {
@@ -85,7 +85,7 @@ export default function LoginPage() {
                 </div> */}
 
                 <Button
-                    onClick={() => console.log('hello')
+                    onClick={() => handleLogin()
                     }
                     className="w-full py-3 px-4 rounded-xl bg-brand-primary text-white font-semibold text-base cursor-pointer"
                 >
