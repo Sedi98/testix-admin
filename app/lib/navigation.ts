@@ -3,7 +3,6 @@ import {
   GraduationCap,
   Users,
   UserCheck,
-  ClipboardList,
   BarChart2,
   BookOpen,
   Coins,
@@ -13,6 +12,7 @@ import {
   Settings,
   FileText,
   HelpCircle,
+  Plus,
 } from "lucide-react";
 import type { NavGroup } from "~/types/navigation";
 
@@ -32,7 +32,7 @@ export const navItems: NavGroup[] = [
   {
     section: "İmtahanlar",
     links: [
-      { label: "İmtahanlar", href: "/dashboard/exams", icon: ClipboardList },
+      { label: "İmtahan yarat", href: "/dashboard/exams", icon: Plus },
       { label: "Nəticələr", href: "/dashboard/results", icon: BarChart2 },
       { label: "Siniflər", href: "/dashboard/classes", icon: BookOpen },
     ],

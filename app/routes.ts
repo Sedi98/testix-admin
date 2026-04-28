@@ -10,5 +10,6 @@ export default [
 
   layout("components/layout/Shell.tsx", [
     route("/dashboard", "routes/dashboard/index.tsx"),
+    route("/dashboard/exams", "routes/admin/index.tsx"),
   ]),
 ] satisfies RouteConfig;

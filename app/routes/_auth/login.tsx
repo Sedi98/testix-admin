@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Eye, EyeOff, Phone, Lock, X } from "lucide-react";
+import { log } from "console";
+import { Button } from "~/components/ui/button";
 
 export default function LoginPage() {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = () => {
+        console.log('hello');
+
         navigate("/dashboard");
     };
     // const [activeTab, setActiveTab] = useState<"login" | "register">("login");
@@ -80,12 +84,13 @@ export default function LoginPage() {
                     </button>
                 </div> */}
 
-                <button
-                    onClick={handleLogin}
+                <Button
+                    onClick={() => console.log('hello')
+                    }
                     className="w-full py-3 px-4 rounded-xl bg-brand-primary text-white font-semibold text-base cursor-pointer"
                 >
                     Daxil ol
-                </button>
+                </Button>
 
                 {/* <button className="w-full py-3 px-4 rounded-xl border border-neutral-stroke text-brand-primary font-semibold text-base cursor-pointer">
                     Qonaq kimi davam et
