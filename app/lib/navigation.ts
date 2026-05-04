@@ -32,7 +32,7 @@ export const navItems: NavGroup[] = [
   {
     section: "İmtahanlar",
     links: [
-      { label: "İmtahan yarat", href: "/dashboard/exams", icon: Plus },
+      { label: "İmtahan yarat", href: "/create-exam", icon: Plus },
       { label: "Nəticələr", href: "/dashboard/results", icon: BarChart2 },
       { label: "Siniflər", href: "/dashboard/classes", icon: BookOpen },
     ],

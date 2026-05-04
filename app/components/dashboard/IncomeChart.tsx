@@ -7,9 +7,9 @@ export const IncomeChart = () => {
   return (
          <div className="bg-white rounded-2xl p-6 border border-neutral-stroke">
                 <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-base font-bold text-gray-800">Gəlir Dinamikası</h2>
-                    <button className="flex items-center gap-1.5 text-sm text-gray-500 border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-all">
-                        Aylıq <ChevronDown size={14} />
+                    <h2 className="text-[25px] font-medium text-brand-dark">Gəlir Dinamikası</h2>
+                    <button className="flex items-center gap-1.5 text-base text-brand-dark border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-all">
+                        Aylıq <ChevronDown size={18} />
                     </button>
                 </div>
                 <ResponsiveContainer width="100%" height={280}>

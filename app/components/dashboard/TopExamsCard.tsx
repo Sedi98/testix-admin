@@ -11,14 +11,14 @@ export const TopExamsCard = () => {
                             Hamısına bax <ChevronRight size={16} />
                         </button>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                         {topExams.map((exam) => (
-                            <div key={exam.name} className="grid grid-cols-[1fr_2fr_auto] items-center gap-4">
-                                <span className="text-sm text-brand-dark font-medium">{exam.name}</span>
-                                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-violet-400 to-violet-600 rounded-full" style={{ width: `${exam.pct}%` }} />
+                            <div key={exam.name} className="grid grid-cols-[1.6fr_2fr_1fr] items-center gap-2">
+                                <span className="text-xl text-brand-dark font-medium">{exam.name}</span>
+                                <div className="h-[6px] bg-dark-blue-50 rounded-full overflow-hidden">
+                                    <div className="h-full bg-brand-primary-light rounded-full" style={{ width: `${exam.pct}%` }} />
                                 </div>
-                                <span className="text-sm font-bold text-brand-dark text-right min-w-[3rem]">{exam.count.toLocaleString()}</span>
+                                <span className="text-xl font-bold text-brand-dark text-right min-w-[3rem]">{exam.count.toLocaleString()}</span>
                             </div>
                         ))}
                     </div>
