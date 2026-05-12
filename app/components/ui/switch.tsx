@@ -10,7 +10,7 @@ function Switch({
   ...props
 }: React.ComponentProps<typeof SwitchPrimitive.Root> & {
   size?: "sm" | "default"
-  variant?: "purple"
+  variant?: "purple" | "green"
 }) {
   return (
     <SwitchPrimitive.Root
@@ -25,6 +25,9 @@ function Switch({
         // variants
         variant === "purple" &&
         "data-[state=checked]:bg-brand-primary data-[state=unchecked]:bg-neutral-200",
+
+        variant === "green" &&
+        "data-[state=checked]:bg-switch-green data-[state=unchecked]:bg-neutral-200",
         className
       )}
       {...props}

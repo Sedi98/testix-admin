@@ -13,6 +13,9 @@ import {
   FileText,
   HelpCircle,
   Plus,
+  Folder,
+  BookOpenText,
+  Building,
 } from "lucide-react";
 import type { NavGroup } from "~/types/navigation";
 
@@ -33,15 +36,21 @@ export const navItems: NavGroup[] = [
     section: "İmtahanlar",
     links: [
       { label: "İmtahan yarat", href: "/create-exam", icon: Plus },
+      { label: "Qaralamalar", href: "/drafts", icon: BookOpenText },
+      {
+        label: "Kateqoriyalar",
+        href: "/categories",
+        icon: Folder,
+      },
       { label: "Nəticələr", href: "/dashboard/results", icon: BarChart2 },
-      { label: "Siniflər", href: "/dashboard/classes", icon: BookOpen },
+      { label: "Siniflər", href: "/dashboard/classes", icon: Building },
     ],
   },
   {
     section: "Maliyyə",
     links: [
       { label: "Koinlər", href: "/dashboard/coins", icon: Coins },
-      { label: "Paketlər", href: "/dashboard/packages", icon: Package },
+      { label: "Planlar", href: "/dashboard/plans", icon: Package },
     ],
   },
   {
