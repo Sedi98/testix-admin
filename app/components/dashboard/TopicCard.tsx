@@ -3,6 +3,7 @@ import { Button } from "~/components/ui/button";
 import { PencilLine, Trash, ArrowRight } from "lucide-react";
 import { Switch } from "~/components/ui/switch";
 import type { TopicCardProps } from "~/lib/topics";
+import DeleteCategoryDialog from "./DeleteCategoryDialog";
 
 type TopicCardComponentProps = TopicCardProps & {
     onToggle?: (value: boolean) => void;
@@ -50,9 +51,11 @@ const TopicCard = ({
                         </div>
         
                         <div className="flex gap-7 justify-end">
-                            <PencilLine size={24} className="text-brand-dark cursor-pointer" />
-        
-                            <Trash size={24} className="text-brand-dark cursor-pointer" />
+                           <Button className="text-brand-dark bg-transparent w-6 h-6 bg-transparent">
+                             <PencilLine /> 
+                           </Button>
+
+                           <DeleteCategoryDialog />
                            
                         </div>
                     </div>

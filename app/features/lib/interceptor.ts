@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 
 const Http = axios.create({
   baseURL: `${import.meta.env.VITE_PUBLIC_API_BASE_URL}/api/v1`,
+  timeout:30000
 });
 
 let isRefreshing = false;

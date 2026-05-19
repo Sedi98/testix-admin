@@ -8,6 +8,8 @@ import Cookies from "js-cookie";
 import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
 import { Login } from "~/services/user/api";
+import { useLogin } from "~/services/user/hooks";
+import { toast } from "sonner"
 
 const loginSchema = z.object({
     phone: z
@@ -24,6 +26,8 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
+
+    const{ mutateAsync:LoginMutation , isPending } = useLogin();
     const [showPassword, setShowPassword] = useState(false);
     const [submitError, setSubmitError] = useState<string | null>(null);
     const navigate = useNavigate();
@@ -45,6 +49,8 @@ export default function LoginPage() {
         setSubmitError(null);
         try {
             console.log(data)
+            const result = await LoginMutation(data);
+            console.log(result);
             // const res = await Login(data);
             // if (!res?.tokens?.access_token) {
             //     setSubmitError("Daxil olmaq mümkün olmadı. Məlumatları yoxlayın.");
@@ -52,8 +58,9 @@ export default function LoginPage() {
             // }
             // Cookies.set("token", res.tokens.access_token, { expires: 1 });
             // Cookies.set("refreshToken", res.tokens.refresh_token, { expires: 30 });
-            navigate("/dashboard");
+            result && navigate("/dashboard");
         } catch {
+            toast.error("Xəta baş verdi. Yenidən cəhd edin.");
             setSubmitError("Xəta baş verdi. Yenidən cəhd edin.");
         }
     };
@@ -66,9 +73,6 @@ export default function LoginPage() {
             >
                 <div className="flex justify-between items-center">
                     <img src="app/assets/icons/Logo.svg" alt="" width={120} height={30} />
-                    <Button type="button" variant="ghost" size="icon" className="cursor-pointer">
-                        <X size={24} className="text-black" />
-                    </Button>
                 </div>
 
                 <div className="space-y-2 mt-5">

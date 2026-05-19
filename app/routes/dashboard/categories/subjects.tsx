@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router"
 import SubjectCard from "~/components/dashboard/SubjectCard"
 import { subjectsData } from "~/lib/subjects"
 import { categoriesData } from "~/lib/categories"
-import AddCategoryDialog from "~/components/dashboard/AddCategoryDialog"
+import AddSubjectDialog from "~/components/dashboard/AddSubjectDialog"
 
 export default function SubjectsPage() {
   const { categoryId } = useParams()
@@ -15,7 +15,7 @@ export default function SubjectsPage() {
     <div className="space-y-7">
         <div className='flex justify-between'>
                 <p className='font-bold text-[25px] text-brand-dark'>{currentCategory?.title}- Fənnlər</p>
-                <AddCategoryDialog />
+                <AddSubjectDialog />
         </div>
       <div className='flex flex-col p-5 gap-10 rounded-xl bg-white'>
       <div className="grid grid-cols-3 gap-x-14 gap-y-10">

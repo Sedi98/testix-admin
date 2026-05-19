@@ -43,7 +43,7 @@ const azMap: Record<string, string> = {
   ı: "i",
 };
 
-const AddCategoryDialog = () => {
+const AddSubjectDialog = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { mutateAsync: createCategory, isPending } = useCreateCategory()
 
@@ -85,7 +85,7 @@ const AddCategoryDialog = () => {
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
                 <Button className="h-12 bg-brand-primary rounded-xl text-white font-semibold text-base">
-                    <Plus size={24} /> Kateqoriya əlavə et
+                    <Plus size={24} /> Fənn əlavə et
                 </Button>
             </DialogTrigger>
 
@@ -95,7 +95,7 @@ const AddCategoryDialog = () => {
             >
                 <DialogHeader className="bg-brand-primary px-8 py-5 flex flex-row items-center justify-between">
                     <DialogTitle className="text-white text-xl font-semibold">
-                        Kateqoriya əlavə et
+                        Fənn əlavə et
                     </DialogTitle>
                     <DialogClose asChild>
                         <Button
@@ -112,7 +112,7 @@ const AddCategoryDialog = () => {
                     <div className="flex flex-col gap-5 p-8">
                         <div className="flex items-center gap-3">
                             <p className="text-brand-dark font-semibold text-sm whitespace-nowrap">
-                                Kateqoriya məlumatları
+                                Fənn məlumatları
                             </p>
                             <span className="h-px w-full bg-neutral-stroke" />
                         </div>
@@ -120,10 +120,10 @@ const AddCategoryDialog = () => {
                         <div className="flex flex-col gap-3 p-5 rounded-xl bg-neutral-50 border border-neutral-stroke">
                             <div className="flex flex-col gap-1">
                                 <label className="text-brand-dark text-sm font-semibold">
-                                    Kateqoriya adı
+                                    Fənn adı
                                 </label>
                                 <Input
-                                    placeholder="Məs : Abituriyent"
+                                    placeholder="Məs : Tarix"
                                     className="bg-white h-12 text-base text-brand-secondary"
                                     {...register("name")}
                                 />
@@ -267,4 +267,4 @@ const AddCategoryDialog = () => {
     )
 }
 
-export default AddCategoryDialog
+export default AddSubjectDialog

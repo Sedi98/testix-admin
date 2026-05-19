@@ -14,7 +14,7 @@ export default [
     route("/categories", "routes/dashboard/categories.tsx"),
     route("/subjects/:categoryId", "routes/dashboard/categories/subjects.tsx"),
     route("/topics/:subjectId", "routes/dashboard/categories/topics.tsx"),
-    route("/drafts", "routes/drafts.tsx"),
+    route("/drafts", "routes/dashboard/drafts.tsx"),
     route(
       "/create-exam/exam-parameters",
       "routes/admin/create-exam/exam-parameters.tsx",

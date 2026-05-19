@@ -4,6 +4,7 @@ import { PencilLine, Trash, ArrowRight } from "lucide-react";
 import { Switch } from "~/components/ui/switch";
 import { useNavigate } from "react-router";
 import type { SubjectCardProps } from "~/lib/subjects";
+import DeleteCategoryDialog from "./DeleteCategoryDialog";
 
 type SubjectCardComponentProps = SubjectCardProps & {
     onToggle?: (value: boolean) => void;
@@ -62,9 +63,11 @@ const SubjectCard = ({
                         </div>
         
                         <div className="flex gap-7 justify-between items-center">
-                            <PencilLine size={24} className="text-brand-dark cursor-pointer" />
-        
-                            <Trash size={24} className="text-brand-dark cursor-pointer" />
+                           <Button className="text-brand-dark bg-transparent w-6 h-6 bg-transparent">
+                        <PencilLine /> 
+                    </Button>
+
+                    <DeleteCategoryDialog />
         
                             <Button 
                                 className="h-12 w-[171px] bg-brand-primary rounded-xl text-white font-semibold text-base gap-2"

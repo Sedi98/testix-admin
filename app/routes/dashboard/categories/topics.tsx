@@ -3,7 +3,7 @@ import TopicCard from "~/components/dashboard/TopicCard"
 import { subjectsData } from "~/lib/subjects"
 import { categoriesData } from "~/lib/categories"
 import { topicsData } from "~/lib/topics"
-import AddCategoryDialog from "~/components/dashboard/AddCategoryDialog"
+import AddTopicDialog from "~/components/dashboard/AddTopicDialog"
 
 export default function TopicsPage() {
   const { subjectId } = useParams()
@@ -17,7 +17,7 @@ export default function TopicsPage() {
     <div className="space-y-7">
         <div className='flex justify-between'>
                 <p className='font-bold text-[25px] text-brand-dark'>{currentSubject?.title} - Mövzular</p>
-                <AddCategoryDialog />
+                <AddTopicDialog />
         </div>
       <div className='flex flex-col p-5 gap-10 rounded-xl bg-white'>
       <div className="grid grid-cols-3 gap-x-14 gap-y-10">
