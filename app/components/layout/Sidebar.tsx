@@ -21,6 +21,7 @@ export function Sidebar() {
                                 <NavLink
                                     key={href}
                                     to={href}
+                                    end={href === "/dashboard"}
                                     className={({ isActive }) =>
                                         `flex items-center gap-[10px] px-4 py-3 rounded-xl font-semibold text-base transition-all ${isActive
                                             ? "bg-primary-0 text-brand-primary"

@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Button } from '~/components/ui/button'
 import { Plus } from 'lucide-react'
 import { categoriesData } from '~/lib/categories'
-import CategoryCard from '~/components/dashboard/CategoryCard'
-import AddCategoryDialog from '~/components/dashboard/AddCategoryDialog'
+import CategoryCard from '~/components/dashboard/categories/CategoryCard'
+import AddCategoryDialog from '~/components/dashboard/categories/AddCategoryDialog'
 
 const CategoriesPage = () => {
     const [categories, setCategories] = useState(categoriesData)
