@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
+import { Toaster } from "sonner";
 
 export default function Shell() {
     return (
@@ -12,6 +13,7 @@ export default function Shell() {
                     <Outlet />
                 </main>
             </div>
+            <Toaster />
         </div>
     );
 }
