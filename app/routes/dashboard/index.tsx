@@ -4,10 +4,10 @@ import {
     Users, GraduationCap, UserCheck,
     ClipboardCheck,
 } from "lucide-react"
-import { StatCard } from "~/components/dashboard/StatCard"
-import { TopExamsCard } from "~/components/dashboard/TopExamsCard"
-import {CoinSalesCard } from "~/components/dashboard/CoinSalesCard"
-import {IncomeChart} from "~/components/dashboard/IncomeChart"
+import { StatCard } from "~/components/dashboard/overview/StatCard"
+import { TopExamsCard } from "~/components/dashboard/overview/TopExamsCard"
+import { CoinSalesCard } from "~/components/dashboard/overview/CoinSalesCard"
+import { IncomeChart } from "~/components/dashboard/overview/IncomeChart"
 
 export default function DashboardIndex() {
     return (

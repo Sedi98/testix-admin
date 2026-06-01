@@ -1,8 +1,8 @@
 import { useParams, useNavigate } from "react-router"
-import SubjectCard from "~/components/dashboard/SubjectCard"
+import SubjectCard from "~/components/dashboard/categories/SubjectCard"
 import { subjectsData } from "~/lib/subjects"
 import { categoriesData } from "~/lib/categories"
-import AddSubjectDialog from "~/components/dashboard/AddSubjectDialog"
+import AddSubjectDialog from "~/components/dashboard/categories/AddSubjectDialog"
 
 export default function SubjectsPage() {
   const { categoryId } = useParams()
